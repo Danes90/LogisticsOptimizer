@@ -1,0 +1,11 @@
+C:\Users\user\source\repos\LogisticsOptimizer\Logistics.Domain\bin\Debug\net10.0\Logistics.Domain.deps.json
+C:\Users\user\source\repos\LogisticsOptimizer\Logistics.Domain\bin\Debug\net10.0\Logistics.Domain.dll
+C:\Users\user\source\repos\LogisticsOptimizer\Logistics.Domain\bin\Debug\net10.0\Logistics.Domain.pdb
+C:\Users\user\source\repos\LogisticsOptimizer\Logistics.Domain\obj\Debug\net10.0\Logistics.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\source\repos\LogisticsOptimizer\Logistics.Domain\obj\Debug\net10.0\Logistics.Domain.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\LogisticsOptimizer\Logistics.Domain\obj\Debug\net10.0\Logistics.Domain.AssemblyInfo.cs
+C:\Users\user\source\repos\LogisticsOptimizer\Logistics.Domain\obj\Debug\net10.0\Logistics.Domain.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\LogisticsOptimizer\Logistics.Domain\obj\Debug\net10.0\Logistics.Domain.dll
+C:\Users\user\source\repos\LogisticsOptimizer\Logistics.Domain\obj\Debug\net10.0\refint\Logistics.Domain.dll
+C:\Users\user\source\repos\LogisticsOptimizer\Logistics.Domain\obj\Debug\net10.0\Logistics.Domain.pdb
+C:\Users\user\source\repos\LogisticsOptimizer\Logistics.Domain\obj\Debug\net10.0\ref\Logistics.Domain.dll

@@ -1,0 +1,15 @@
+C:\Users\user\source\repos\LogisticsOptimizer\Logistics.Application\bin\Debug\net10.0\Logistics.Application.deps.json
+C:\Users\user\source\repos\LogisticsOptimizer\Logistics.Application\bin\Debug\net10.0\Logistics.Application.dll
+C:\Users\user\source\repos\LogisticsOptimizer\Logistics.Application\bin\Debug\net10.0\Logistics.Application.pdb
+C:\Users\user\source\repos\LogisticsOptimizer\Logistics.Application\bin\Debug\net10.0\Logistics.Domain.dll
+C:\Users\user\source\repos\LogisticsOptimizer\Logistics.Application\bin\Debug\net10.0\Logistics.Domain.pdb
+C:\Users\user\source\repos\LogisticsOptimizer\Logistics.Application\obj\Debug\net10.0\Logistics.Application.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\LogisticsOptimizer\Logistics.Application\obj\Debug\net10.0\Logistics.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\source\repos\LogisticsOptimizer\Logistics.Application\obj\Debug\net10.0\Logistics.Application.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\LogisticsOptimizer\Logistics.Application\obj\Debug\net10.0\Logistics.Application.AssemblyInfo.cs
+C:\Users\user\source\repos\LogisticsOptimizer\Logistics.Application\obj\Debug\net10.0\Logistics.Application.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\LogisticsOptimizer\Logistics.Application\obj\Debug\net10.0\Logistic.475C1419.Up2Date
+C:\Users\user\source\repos\LogisticsOptimizer\Logistics.Application\obj\Debug\net10.0\Logistics.Application.dll
+C:\Users\user\source\repos\LogisticsOptimizer\Logistics.Application\obj\Debug\net10.0\refint\Logistics.Application.dll
+C:\Users\user\source\repos\LogisticsOptimizer\Logistics.Application\obj\Debug\net10.0\Logistics.Application.pdb
+C:\Users\user\source\repos\LogisticsOptimizer\Logistics.Application\obj\Debug\net10.0\ref\Logistics.Application.dll
