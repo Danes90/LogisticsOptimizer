@@ -22,6 +22,20 @@ namespace Logistics.Infrastructure.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
+            modelBuilder.Entity("Logistics.Domain.Entities.Pallet", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<int>("Weight")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Pallets");
+                });
+
             modelBuilder.Entity("Logistics.Domain.Entities.Truck", b =>
                 {
                     b.Property<Guid>("Id")
@@ -31,6 +45,37 @@ namespace Logistics.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Trucks");
+                });
+
+            modelBuilder.Entity("Logistics.Domain.Entities.Pallet", b =>
+                {
+                    b.OwnsOne("Logistics.Domain.ValueObjects.Dimensions", "Dimensions", b1 =>
+                        {
+                            b1.Property<Guid>("PalletId")
+                                .HasColumnType("uuid");
+
+                            b1.Property<int>("Height")
+                                .HasColumnType("integer")
+                                .HasColumnName("Height");
+
+                            b1.Property<int>("Length")
+                                .HasColumnType("integer")
+                                .HasColumnName("Length");
+
+                            b1.Property<int>("Width")
+                                .HasColumnType("integer")
+                                .HasColumnName("Width");
+
+                            b1.HasKey("PalletId");
+
+                            b1.ToTable("Pallets");
+
+                            b1.WithOwner()
+                                .HasForeignKey("PalletId");
+                        });
+
+                    b.Navigation("Dimensions")
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Logistics.Domain.Entities.Truck", b =>

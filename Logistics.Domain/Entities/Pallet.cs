@@ -1,11 +1,18 @@
-﻿namespace Logistics.Domain.Entities;
-using Logistics.Domain.ValueObjects;
+﻿using Logistics.Domain.ValueObjects;
+
+namespace Logistics.Domain.Entities;
 
 public sealed class Pallet
 {
-    public Guid Id { get; }
-    public Dimensions Dimensions { get; }
-    public int Weight { get; }
+    public Guid Id { get; private set; }
+
+    public Dimensions Dimensions { get; private set; }
+
+    public int Weight { get; private set; }
+
+    private Pallet()
+    {
+    }
 
     public Pallet(
         Guid id,

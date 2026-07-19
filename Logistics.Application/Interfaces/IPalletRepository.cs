@@ -10,4 +10,8 @@ public interface IPalletRepository
 
     Task<IReadOnlyCollection<Pallet>> GetAllAsync(
         CancellationToken cancellationToken = default);
+
+    Task<IReadOnlyCollection<Pallet>> GetByIdsAsync(
+    IEnumerable<Guid> ids,
+    CancellationToken cancellationToken = default);
 }

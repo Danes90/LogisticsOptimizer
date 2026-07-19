@@ -99,3 +99,4 @@ C:\Users\user\source\repos\LogisticsOptimizer\Logistics.Domain.Test\obj\Debug\ne
 C:\Users\user\source\repos\LogisticsOptimizer\Logistics.Domain.Test\obj\Debug\net10.0\Logistics.Domain.Test.pdb
 C:\Users\user\source\repos\LogisticsOptimizer\Logistics.Domain.Test\obj\Debug\net10.0\Logistics.Domain.Test.genruntimeconfig.cache
 C:\Users\user\source\repos\LogisticsOptimizer\Logistics.Domain.Test\obj\Debug\net10.0\ref\Logistics.Domain.Test.dll
+C:\Users\user\source\repos\LogisticsOptimizer\Logistics.Domain.Test\obj\Debug\net10.0\Logistics.Domain.Test.sourcelink.json

@@ -1,7 +1,11 @@
 using Logistics.Application.Commands.CreatePallet;
 using Logistics.Application.Commands.CreateTruck;
+using Logistics.Application.Commands.OptimizeLoadPlan;
 using Logistics.Application.Interfaces;
+using Logistics.Application.Queries.GetPallets;
 using Logistics.Application.Queries.GetTrucks;
+using Logistics.Domain.Interfaces;
+using Logistics.Domain.Services;
 using Logistics.Infrastructure.Persistence;
 using Logistics.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -16,9 +20,22 @@ builder.Services.AddDbContext<LogisticsDbContext>(
             builder.Configuration.GetConnectionString("PostgreSql"));
     });
 
-// Dependency Injection
+// Repositories
 builder.Services.AddScoped<ITruckRepository, TruckRepository>();
+builder.Services.AddScoped<IPalletRepository, PalletRepository>();
+builder.Services.AddScoped<
+    ILoadOptimizer,
+    SimpleLoadOptimizer>();
+builder.Services.AddScoped<
+    OptimizeLoadPlanHandler>();
+
+
+
+// Handlers
 builder.Services.AddScoped<CreateTruckHandler>();
+builder.Services.AddScoped<GetTrucksHandler>();
+builder.Services.AddScoped<CreatePalletHandler>();
+builder.Services.AddScoped<GetPalletsHandler>();
 
 // Controllers
 builder.Services.AddControllers();
@@ -27,22 +44,14 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddScoped<CreatePalletHandler>();
-
-builder.Services.AddScoped<GetTrucksHandler>();
-
 var app = builder.Build();
 
 // Middleware
-
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
-// Fejlesztés alatt ezt kikommentelheted,
-// ha a HTTPS warning zavar
 
 // app.UseHttpsRedirection();
 

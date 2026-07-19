@@ -10,10 +10,11 @@ public sealed class PalletsController : ControllerBase
     private readonly CreatePalletHandler _createHandler;
     private readonly GetPalletsHandler _getHandler;
 
+
     public PalletsController(
         CreatePalletHandler createHandler,
         GetPalletsHandler getHandler)
-    {
+    { 
         _createHandler = createHandler;
         _getHandler = getHandler;
     }
