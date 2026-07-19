@@ -17,3 +17,4 @@ C:\Users\user\source\repos\LogisticsOptimizer\Logistics.Infrastructure\bin\Debug
 C:\Users\user\source\repos\LogisticsOptimizer\Logistics.Infrastructure\obj\Debug\net10.0\Logistics.Infrastructure.csproj.AssemblyReference.cache
 C:\Users\user\source\repos\LogisticsOptimizer\Logistics.Infrastructure\obj\Debug\net10.0\Logistic.CD8B545E.Up2Date
 C:\Users\user\source\repos\LogisticsOptimizer\Logistics.Infrastructure\obj\Debug\net10.0\Logistics.Infrastructure.genruntimeconfig.cache
+C:\Users\user\source\repos\LogisticsOptimizer\Logistics.Infrastructure\obj\Debug\net10.0\Logistics.Infrastructure.sourcelink.json

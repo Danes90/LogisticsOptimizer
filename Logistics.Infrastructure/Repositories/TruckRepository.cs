@@ -1,6 +1,7 @@
 ﻿using Logistics.Application.Interfaces;
 using Logistics.Domain.Entities;
 using Logistics.Infrastructure.Persistence;
+using Microsoft.EntityFrameworkCore;
 
 namespace Logistics.Infrastructure.Repositories;
 
@@ -34,5 +35,12 @@ public sealed class TruckRepository
         return await _dbContext.Trucks.FindAsync(
             [id],
             cancellationToken);
+    }
+
+
+    public async Task<IReadOnlyCollection<Truck>> GetAllAsync(
+    CancellationToken cancellationToken = default)
+    {
+        return await _dbContext.Trucks.ToListAsync(cancellationToken);
     }
 }

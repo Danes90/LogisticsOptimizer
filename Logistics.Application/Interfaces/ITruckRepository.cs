@@ -10,4 +10,7 @@ public interface ITruckRepository
     Task<Truck?> GetByIdAsync(
         Guid id,
         CancellationToken cancellationToken = default);
+
+    Task<IReadOnlyCollection<Truck>> GetAllAsync(
+    CancellationToken cancellationToken = default);
 }

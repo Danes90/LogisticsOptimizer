@@ -129,3 +129,4 @@ C:\Users\user\source\repos\LogisticsOptimizer\Logistics.Api\bin\Debug\net10.0\zh
 C:\Users\user\source\repos\LogisticsOptimizer\Logistics.Api\bin\Debug\net10.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\user\source\repos\LogisticsOptimizer\Logistics.Api\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\user\source\repos\LogisticsOptimizer\Logistics.Api\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\user\source\repos\LogisticsOptimizer\Logistics.Api\obj\Debug\net10.0\Logistics.Api.sourcelink.json

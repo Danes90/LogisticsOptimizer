@@ -1,5 +1,6 @@
 ﻿using Logistics.Api.Contracts.Trucks;
 using Logistics.Application.Commands.CreateTruck;
+using Logistics.Application.Queries.GetTrucks;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Logistics.Api.Controllers;
@@ -9,11 +10,14 @@ namespace Logistics.Api.Controllers;
 public sealed class TrucksController : ControllerBase
 {
     private readonly CreateTruckHandler _handler;
+    private readonly GetTrucksHandler _getTrucksHandler;
 
     public TrucksController(
-        CreateTruckHandler handler)
+        CreateTruckHandler createTruckHandler,
+        GetTrucksHandler getTrucksHandler)
     {
-        _handler = handler;
+        _handler = createTruckHandler;
+        _getTrucksHandler = getTrucksHandler;
     }
 
     [HttpPost]
@@ -32,5 +36,16 @@ public sealed class TrucksController : ControllerBase
             cancellationToken);
 
         return Ok();
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> GetAll(
+    CancellationToken cancellationToken)
+    {
+        var result = await _getTrucksHandler.Handle(
+            new GetTrucksQuery(),
+            cancellationToken);
+
+        return Ok(result);
     }
 }

@@ -12,6 +12,9 @@ public sealed class LogisticsDbContext
     {
     }
 
+    public DbSet<Pallet> Pallets =>
+    Set<Pallet>();
+
     public DbSet<Truck> Trucks =>
         Set<Truck>();
 

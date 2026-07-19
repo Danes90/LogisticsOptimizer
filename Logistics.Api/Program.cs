@@ -1,5 +1,7 @@
+using Logistics.Application.Commands.CreatePallet;
 using Logistics.Application.Commands.CreateTruck;
 using Logistics.Application.Interfaces;
+using Logistics.Application.Queries.GetTrucks;
 using Logistics.Infrastructure.Persistence;
 using Logistics.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -24,6 +26,10 @@ builder.Services.AddControllers();
 // Swagger
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddScoped<CreatePalletHandler>();
+
+builder.Services.AddScoped<GetTrucksHandler>();
 
 var app = builder.Build();
 
