@@ -9,4 +9,5 @@
   <Project Path="Logistics.Domain.Test/Logistics.Domain.Test.csproj" />
   <Project Path="Logistics.Domain/Logistics.Domain.csproj" />
   <Project Path="Logistics.Infrastructure/Logistics.Infrastructure.csproj" />
+  <Project Path="Logistics.IntegrationTests/Logistics.IntegrationTests.csproj" Id="471ff4c8-cb93-44f1-8138-e7be89fa72cd" />
 </Solution>

@@ -1,3 +1,7 @@
+using FluentValidation;
+using FluentValidation.AspNetCore;
+using Logistics.Api.Middleware;
+using Logistics.Api.Validators;
 using Logistics.Application.Commands.CreatePallet;
 using Logistics.Application.Commands.CreateTruck;
 using Logistics.Application.Commands.OptimizeLoadPlan;
@@ -20,6 +24,10 @@ builder.Services.AddDbContext<LogisticsDbContext>(
             builder.Configuration.GetConnectionString("PostgreSql"));
     });
 
+builder.Services.AddFluentValidationAutoValidation();
+builder.Services.AddValidatorsFromAssemblyContaining<
+    CreateTruckRequestValidator>();
+
 // Repositories
 builder.Services.AddScoped<ITruckRepository, TruckRepository>();
 builder.Services.AddScoped<IPalletRepository, PalletRepository>();
@@ -36,6 +44,7 @@ builder.Services.AddScoped<CreateTruckHandler>();
 builder.Services.AddScoped<GetTrucksHandler>();
 builder.Services.AddScoped<CreatePalletHandler>();
 builder.Services.AddScoped<GetPalletsHandler>();
+builder.Services.AddScoped<ILoadPlanRepository,LoadPlanRepository>();
 
 // Controllers
 builder.Services.AddControllers();
@@ -45,6 +54,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+app.UseMiddleware<GlobalExceptionMiddleware>();
 
 // Middleware
 if (app.Environment.IsDevelopment())
@@ -58,3 +68,8 @@ if (app.Environment.IsDevelopment())
 app.UseAuthorization();
 app.MapControllers();
 app.Run();
+
+
+public partial class Program
+{
+}

@@ -18,6 +18,12 @@ public sealed class LogisticsDbContext
     public DbSet<Truck> Trucks =>
         Set<Truck>();
 
+    //public DbSet<LoadPlan> LoadPlans =>
+    //Set<LoadPlan>();
+
+    //public DbSet<Placement> Placements =>
+      //  Set<Placement>();
+
     protected override void OnModelCreating(
     ModelBuilder modelBuilder)
     {

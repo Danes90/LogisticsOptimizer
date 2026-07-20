@@ -1,7 +1,5 @@
 ﻿using Logistics.Domain.ValueObjects;
-
 namespace Logistics.Domain.Entities;
-
 
 public sealed class Placement
 {
@@ -20,5 +18,4 @@ public sealed class Placement
         Position = position ??
             throw new ArgumentNullException(nameof(position));
     }
-
 }
