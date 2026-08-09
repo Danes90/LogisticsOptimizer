@@ -44,7 +44,7 @@ builder.Services.AddScoped<CreateTruckHandler>();
 builder.Services.AddScoped<GetTrucksHandler>();
 builder.Services.AddScoped<CreatePalletHandler>();
 builder.Services.AddScoped<GetPalletsHandler>();
-builder.Services.AddScoped<ILoadPlanRepository,LoadPlanRepository>();
+//builder.Services.AddScoped<ILoadPlanRepository,LoadPlanRepository>();
 
 // Controllers
 builder.Services.AddControllers();

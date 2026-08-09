@@ -9,18 +9,17 @@ public sealed class OptimizeLoadPlanHandler
     private readonly ITruckRepository _truckRepository;
     private readonly IPalletRepository _palletRepository;
     private readonly ILoadOptimizer _optimizer;
-    private readonly ILoadPlanRepository _loadPlanRepository;
+    //private readonly ILoadPlanRepository _loadPlanRepository;
 
     public OptimizeLoadPlanHandler(
      ITruckRepository truckRepository,
      IPalletRepository palletRepository,
-     ILoadOptimizer optimizer,
-     ILoadPlanRepository loadPlanRepository)
+     ILoadOptimizer optimizer)
     {
         _truckRepository = truckRepository;
         _palletRepository = palletRepository;
         _optimizer = optimizer;
-        _loadPlanRepository = loadPlanRepository;
+       // _loadPlanRepository = loadPlanRepository;
     }
 
     public async Task<LoadPlanDto> Handle(
@@ -31,16 +30,15 @@ public sealed class OptimizeLoadPlanHandler
             command.TruckId,
             cancellationToken);
 
+
         if (truck is null)
         {
-            if (truck is null)
-            {
-                throw new TruckNotFoundException(
-                    command.TruckId);
-            }
+            throw new TruckNotFoundException(
+                command.TruckId);
         }
 
-        var pallets =
+
+    var pallets =
             await _palletRepository.GetByIdsAsync(
                 command.PalletIds,
                 cancellationToken);
@@ -58,9 +56,9 @@ public sealed class OptimizeLoadPlanHandler
                 pallets);
 
 
-        await _loadPlanRepository.AddAsync(
+        /*await _loadPlanRepository.AddAsync(
             loadPlan,
-            cancellationToken);
+            cancellationToken);*/
 
 
         return new LoadPlanDto(

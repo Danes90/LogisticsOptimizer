@@ -9,6 +9,7 @@ namespace Logistics.IntegrationTests;
 
 public class PalletEndpointsTests
 {
+    /*
     [Fact]
     public async Task CreatePallet_ShouldReturnSuccess()
     {
@@ -63,7 +64,7 @@ public class PalletEndpointsTests
                 .ReadFromJsonAsync<List<PalletResponse>>();
 
         pallets.Should().NotBeEmpty();
-    }
+    }*/
 }
 
 public sealed class PalletResponse

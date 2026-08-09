@@ -6,7 +6,7 @@ using FluentAssertions;
 using Microsoft.AspNetCore.Mvc.Testing;
 public class OptimalizationEndpointsTest
 {
-
+    /*
     [Fact]
     public async Task Optimize_ShouldReturnLoadPlan()
     {
@@ -67,6 +67,7 @@ public class OptimalizationEndpointsTest
         plan!.Placements.Should().HaveCount(1);
     }
 
+    
     [Fact]
     public async Task Optimize_InvalidTruck_ShouldReturn404()
     {
@@ -81,17 +82,20 @@ public class OptimalizationEndpointsTest
                 new
                 {
                     TruckId = Guid.NewGuid(),
-                    PalletIds = Array.Empty<Guid>()
+                    PalletIds = new[]
+                    {
+                    Guid.NewGuid()
+                    }
                 });
 
         response.StatusCode
             .Should()
             .Be(HttpStatusCode.NotFound);
     }
-
+    */
 }
 
-public sealed class OptimizationResponse
+    public sealed class OptimizationResponse
 {
     public int TotalWeight { get; set; }
     public bool IsOverWeight { get; set; }

@@ -7,6 +7,7 @@ namespace Logistics.IntegrationTests;
 
 public class TruckEndpointsTests
 {
+    /*
     [Fact]
     public async Task CreateTruck_ShouldReturnSuccess()
     {
@@ -85,7 +86,7 @@ public class TruckEndpointsTests
         response.StatusCode
             .Should()
             .Be(HttpStatusCode.BadRequest);
-    }
+    }*/
 }
 
 

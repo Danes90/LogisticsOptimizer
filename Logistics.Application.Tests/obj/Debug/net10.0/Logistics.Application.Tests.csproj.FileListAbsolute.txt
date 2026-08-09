@@ -100,10 +100,10 @@ C:\Users\user\source\repos\LogisticsOptimizer\Logistics.Application.Tests\obj\De
 C:\Users\user\source\repos\LogisticsOptimizer\Logistics.Application.Tests\obj\Debug\net10.0\Logistics.Application.Tests.AssemblyInfoInputs.cache
 C:\Users\user\source\repos\LogisticsOptimizer\Logistics.Application.Tests\obj\Debug\net10.0\Logistics.Application.Tests.AssemblyInfo.cs
 C:\Users\user\source\repos\LogisticsOptimizer\Logistics.Application.Tests\obj\Debug\net10.0\Logistics.Application.Tests.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\LogisticsOptimizer\Logistics.Application.Tests\obj\Debug\net10.0\Logistics.Application.Tests.sourcelink.json
 C:\Users\user\source\repos\LogisticsOptimizer\Logistics.Application.Tests\obj\Debug\net10.0\Logistic.C3C10BCB.Up2Date
 C:\Users\user\source\repos\LogisticsOptimizer\Logistics.Application.Tests\obj\Debug\net10.0\Logistics.Application.Tests.dll
 C:\Users\user\source\repos\LogisticsOptimizer\Logistics.Application.Tests\obj\Debug\net10.0\refint\Logistics.Application.Tests.dll
 C:\Users\user\source\repos\LogisticsOptimizer\Logistics.Application.Tests\obj\Debug\net10.0\Logistics.Application.Tests.pdb
 C:\Users\user\source\repos\LogisticsOptimizer\Logistics.Application.Tests\obj\Debug\net10.0\Logistics.Application.Tests.genruntimeconfig.cache
 C:\Users\user\source\repos\LogisticsOptimizer\Logistics.Application.Tests\obj\Debug\net10.0\ref\Logistics.Application.Tests.dll
-C:\Users\user\source\repos\LogisticsOptimizer\Logistics.Application.Tests\obj\Debug\net10.0\Logistics.Application.Tests.sourcelink.json

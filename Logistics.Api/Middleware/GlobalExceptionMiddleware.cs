@@ -20,18 +20,6 @@ public sealed class GlobalExceptionMiddleware
         {
             await _next(context);
         }
-        catch (ArgumentOutOfRangeException exception)
-        {
-            context.Response.StatusCode = 400;
-
-            await context.Response.WriteAsJsonAsync(
-                new
-                {
-                    Message = exception.Message
-                });
-
-            return;
-        }
         catch (TruckNotFoundException exception)
         {
             context.Response.StatusCode = 404;
