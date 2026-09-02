@@ -43,4 +43,16 @@ public sealed class TruckRepository
     {
         return await _dbContext.Trucks.ToListAsync(cancellationToken);
     }
+
+    public async Task DeleteAsync(
+    Truck truck,
+    CancellationToken cancellationToken = default)
+    {
+        _dbContext.Trucks.Remove(truck);
+
+        await _dbContext.SaveChangesAsync(
+            cancellationToken);
+    }
+
+
 }

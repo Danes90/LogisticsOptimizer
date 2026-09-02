@@ -1,5 +1,6 @@
 ﻿using Logistics.Api.Contracts.Trucks;
 using Logistics.Application.Commands.CreateTruck;
+using Logistics.Application.Commands.DeleteTruck;
 using Logistics.Application.Queries.GetTruckById;
 using Logistics.Application.Queries.GetTrucks;
 using Microsoft.AspNetCore.Mvc;
@@ -13,16 +14,18 @@ public sealed class TrucksController : ControllerBase
     private readonly CreateTruckHandler _handler;
     private readonly GetTrucksHandler _getTrucksHandler;
     private readonly GetTruckByIdHandler _getTruckByIdHandler;
+    private readonly DeleteTruckHandler _deleteTruckHandler;
 
     public TrucksController(
         CreateTruckHandler createHandler,
         GetTrucksHandler getHandler,
-        GetTruckByIdHandler getTruckByIdHandler
-    )
+        GetTruckByIdHandler getTruckByIdHandler,
+        DeleteTruckHandler deleteTruckHandler)
     {
         _handler = createHandler;
         _getTrucksHandler = getHandler;
         _getTruckByIdHandler = getTruckByIdHandler;
+        _deleteTruckHandler = deleteTruckHandler;
     }
 
     [HttpPost]
@@ -63,5 +66,17 @@ public sealed class TrucksController : ControllerBase
                 cancellationToken);
 
         return Ok(result);
+    }
+
+    [HttpDelete("{id:guid}")]
+    public async Task<IActionResult> Delete(
+    Guid id,
+    CancellationToken cancellationToken)
+    {
+        await _deleteTruckHandler.Handle(
+            new DeleteTruckCommand(id),
+            cancellationToken);
+
+        return NoContent();
     }
 }

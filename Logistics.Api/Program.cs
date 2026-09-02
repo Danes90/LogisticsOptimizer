@@ -4,11 +4,12 @@ using Logistics.Api.Middleware;
 using Logistics.Api.Validators;
 using Logistics.Application.Commands.CreatePallet;
 using Logistics.Application.Commands.CreateTruck;
+using Logistics.Application.Commands.DeleteTruck;
 using Logistics.Application.Commands.OptimizeLoadPlan;
 using Logistics.Application.Interfaces;
+using Logistics.Application.Queries.GetPalletById;
 using Logistics.Application.Queries.GetPallets;
 using Logistics.Application.Queries.GetTruckById;
-using Logistics.Application.Queries.GetPalletById;
 using Logistics.Application.Queries.GetTrucks;
 using Logistics.Domain.Interfaces;
 using Logistics.Domain.Services;
@@ -40,6 +41,7 @@ builder.Services.AddScoped<
     OptimizeLoadPlanHandler>();
 builder.Services.AddScoped<GetTruckByIdHandler>();
 builder.Services.AddScoped<GetPalletByIdHandler>();
+builder.Services.AddScoped<DeleteTruckHandler>();
 
 
 

@@ -14,5 +14,9 @@ public interface ITruckRepository
     Task<IReadOnlyCollection<Truck>> GetAllAsync(
     CancellationToken cancellationToken = default);
 
+    Task DeleteAsync(
+    Truck truck,
+    CancellationToken cancellationToken = default);
+
 
 }
