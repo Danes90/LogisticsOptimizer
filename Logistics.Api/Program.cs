@@ -7,6 +7,8 @@ using Logistics.Application.Commands.CreateTruck;
 using Logistics.Application.Commands.OptimizeLoadPlan;
 using Logistics.Application.Interfaces;
 using Logistics.Application.Queries.GetPallets;
+using Logistics.Application.Queries.GetTruckById;
+using Logistics.Application.Queries.GetPalletById;
 using Logistics.Application.Queries.GetTrucks;
 using Logistics.Domain.Interfaces;
 using Logistics.Domain.Services;
@@ -36,6 +38,8 @@ builder.Services.AddScoped<
     SimpleLoadOptimizer>();
 builder.Services.AddScoped<
     OptimizeLoadPlanHandler>();
+builder.Services.AddScoped<GetTruckByIdHandler>();
+builder.Services.AddScoped<GetPalletByIdHandler>();
 
 
 

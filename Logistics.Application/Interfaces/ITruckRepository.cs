@@ -13,4 +13,6 @@ public interface ITruckRepository
 
     Task<IReadOnlyCollection<Truck>> GetAllAsync(
     CancellationToken cancellationToken = default);
+
+
 }

@@ -43,4 +43,14 @@ public sealed class PalletRepository
             .Where(x => ids.Contains(x.Id))
             .ToListAsync(cancellationToken);
     }
+
+    public async Task<Pallet?> GetByIdAsync(
+    Guid id,
+    CancellationToken cancellationToken = default)
+    {
+        return await _dbContext.Pallets
+            .FirstOrDefaultAsync(
+                x => x.Id == id,
+                cancellationToken);
+    }
 }

@@ -1,7 +1,8 @@
-﻿using Logistics.Application.Commands.CreatePallet;
+﻿using Logistics.Api.Contracts.Pallets;
+using Logistics.Application.Commands.CreatePallet;
 using Logistics.Application.Queries.GetPallets;
+using Logistics.Application.Queries.GetPalletById;
 using Microsoft.AspNetCore.Mvc;
-using Logistics.Api.Contracts.Pallets;
 
 [ApiController]
 [Route("api/pallets")]
@@ -9,6 +10,7 @@ public sealed class PalletsController : ControllerBase
 {
     private readonly CreatePalletHandler _createHandler;
     private readonly GetPalletsHandler _getHandler;
+    private readonly GetPalletByIdHandler _getPallentByIdHandler;
 
 
     public PalletsController(
