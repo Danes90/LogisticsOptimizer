@@ -18,4 +18,8 @@ public interface IPalletRepository
     Task<Pallet?> GetByIdAsync(
     Guid id,
     CancellationToken cancellationToken = default);
+
+    Task DeleteAsync(
+    Pallet pallet,
+    CancellationToken cancellationToken = default);
 }

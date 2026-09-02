@@ -4,6 +4,7 @@ using Logistics.Api.Middleware;
 using Logistics.Api.Validators;
 using Logistics.Application.Commands.CreatePallet;
 using Logistics.Application.Commands.CreateTruck;
+using Logistics.Application.Commands.DeletePallet;
 using Logistics.Application.Commands.DeleteTruck;
 using Logistics.Application.Commands.OptimizeLoadPlan;
 using Logistics.Application.Interfaces;
@@ -42,6 +43,7 @@ builder.Services.AddScoped<
 builder.Services.AddScoped<GetTruckByIdHandler>();
 builder.Services.AddScoped<GetPalletByIdHandler>();
 builder.Services.AddScoped<DeleteTruckHandler>();
+builder.Services.AddScoped<DeletePalletHandler>();
 
 
 

@@ -53,4 +53,14 @@ public sealed class PalletRepository
                 x => x.Id == id,
                 cancellationToken);
     }
+
+    public async Task DeleteAsync(
+    Pallet pallet,
+    CancellationToken cancellationToken = default)
+    {
+        _dbContext.Pallets.Remove(pallet);
+
+        await _dbContext.SaveChangesAsync(
+            cancellationToken);
+    }
 }
