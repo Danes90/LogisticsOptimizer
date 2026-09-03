@@ -60,16 +60,22 @@ public sealed class OptimizeLoadPlanHandler
             loadPlan,
             cancellationToken);*/
 
+        var placedCount = loadPlan.Placements.Count;
+
+        var unplacedCount = pallets.Count - placedCount;
 
         return new LoadPlanDto(
             loadPlan.TotalWeight,
             loadPlan.IsOverWeight,
+            placedCount,
+            unplacedCount,
             loadPlan.Placements
                 .Select(x =>
                     new PlacementDto(
                         x.Pallet.Id,
                         x.Position.X,
-                        x.Position.Y))
+                        x.Position.Y,
+                        x.Rotated))
                 .ToList());
     }
 }

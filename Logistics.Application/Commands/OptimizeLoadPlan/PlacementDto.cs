@@ -3,4 +3,6 @@
 public sealed record PlacementDto(
     Guid PalletId,
     int X,
-    int Y);
+    int Y,
+    bool Rotated
+    );
