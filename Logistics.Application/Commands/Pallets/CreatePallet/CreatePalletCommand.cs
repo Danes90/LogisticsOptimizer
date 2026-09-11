@@ -4,4 +4,5 @@ public sealed record CreatePalletCommand(
     int Length,
     int Width,
     int Height,
-    int Weight);
+    int Weight,
+    int Priority);

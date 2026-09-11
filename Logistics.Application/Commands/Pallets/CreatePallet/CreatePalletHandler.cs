@@ -24,7 +24,9 @@ public sealed class CreatePalletHandler
                 command.Length,
                 command.Width,
                 command.Height),
-            command.Weight);
+            command.Weight, 
+            command.Priority
+            );
 
         await _repository.AddAsync(
             pallet,

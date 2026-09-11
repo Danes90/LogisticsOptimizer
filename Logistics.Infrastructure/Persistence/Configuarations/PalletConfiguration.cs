@@ -27,5 +27,8 @@ public sealed class PalletConfiguration
                 dimensions.Property(x => x.Height)
                     .HasColumnName("Height");
             });
+
+        builder.Property(x => x.Priority);
+
     }
 }

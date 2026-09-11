@@ -10,6 +10,8 @@ public sealed class Pallet
 
     public int Weight { get; private set; }
 
+    public int Priority { get; private set; }
+
     private Pallet()
     {
     }
@@ -17,7 +19,8 @@ public sealed class Pallet
     public Pallet(
         Guid id,
         Dimensions dimensions,
-        int weight)
+        int weight,
+        int priority)
     {
         if (weight <= 0)
         {
@@ -28,5 +31,6 @@ public sealed class Pallet
         Id = id;
         Dimensions = dimensions;
         Weight = weight;
+        Priority = priority;
     }
 }

@@ -16,11 +16,17 @@ public sealed class SimpleLoadOptimizer
         var currentX = 0;
         var currentY = 0;
         var rowHeight = 0;
+        var currentWeight = 0;
 
         foreach (var pallet in pallets)
         {
             var length = pallet.Dimensions.Length;
             var width = pallet.Dimensions.Width;
+
+            if (currentWeight + pallet.Weight >truck.MaxWeight)
+            {
+                continue;
+            }
 
             var rotated = false;
 
@@ -56,6 +62,7 @@ public sealed class SimpleLoadOptimizer
                     rotated));
 
             currentX += length;
+            currentWeight += pallet.Weight;
 
             rowHeight = Math.Max(
                 rowHeight,

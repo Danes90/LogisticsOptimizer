@@ -61,14 +61,18 @@ public sealed class OptimizeLoadPlanHandler
             cancellationToken);*/
 
         var placedCount = loadPlan.Placements.Count;
-
         var unplacedCount = pallets.Count - placedCount;
+        var remainingCapacity =truck.MaxWeight -loadPlan.TotalWeight;
+        var placedPalletIds =loadPlan.Placements.Select(x => x.Pallet.Id).ToHashSet();
+        var unplacedPalletIds =pallets.Where(x => !placedPalletIds.Contains(x.Id)).Select(x => x.Id).ToList();
 
         return new LoadPlanDto(
             loadPlan.TotalWeight,
+            remainingCapacity,
             loadPlan.IsOverWeight,
             placedCount,
             unplacedCount,
+            unplacedPalletIds,
             loadPlan.Placements
                 .Select(x =>
                     new PlacementDto(
