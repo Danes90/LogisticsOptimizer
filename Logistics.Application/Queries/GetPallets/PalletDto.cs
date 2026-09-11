@@ -6,5 +6,5 @@ public sealed record PalletDto(
     int Width,
     int Height,
     int Weight,
-    int Proriority
+    int Priority
     );

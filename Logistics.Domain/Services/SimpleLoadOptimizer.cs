@@ -18,7 +18,9 @@ public sealed class SimpleLoadOptimizer
         var rowHeight = 0;
         var currentWeight = 0;
 
-        foreach (var pallet in pallets)
+        var orderedPallets =pallets.OrderByDescending(x => x.Priority).ToList();
+
+        foreach (var pallet in orderedPallets)
         {
             var length = pallet.Dimensions.Length;
             var width = pallet.Dimensions.Width;
